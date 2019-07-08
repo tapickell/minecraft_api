@@ -25,7 +25,7 @@ class World
   # @param y [Double] y coordinate
   # @param z [Double] z coordinate
   def get_block_with_data(x,y,z)
-    response = @api.send_and_receive("world.getBlcoWithData(#{x},#{y},#{z})")
+    response = @api.send_and_receive("world.getBlockWithData(#{x},#{y},#{z})")
     response.split(',').map { |s| Block.find(s.to_i) }
   end
 
@@ -87,16 +87,16 @@ class World
     @api.send_and_receive("world.getHeight(#{x},#{z})").to_i
   end
 
-  def get_player_entity_id(name) do
+  def get_player_entity_id(name)
     @api.send_and_receive("world.getPlayerId(name)").to_i
   end
 
-  def get_player_entity_ids() do
+  def get_player_entity_ids()
     response = @api.send_and_receive("world.getPlayerIds()")
     response.split(',').map { |s| s.to_i }
   end
 
-  def setting(setting, status) do
+  def setting(setting, status) 
     @api.send("world.setting(#{setting},#{!!status})")
   end
 

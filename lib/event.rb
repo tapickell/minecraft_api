@@ -1,5 +1,5 @@
-class BlockEvent do
+class BlockEvent 
 end
 
-class ChatEvent do
+class ChatEvent 
 end
