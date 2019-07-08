@@ -22,8 +22,10 @@ class Block
   SAPLING             = Block.new(6)
   BEDROCK             = Block.new(7)
   WATER_FLOWING       = Block.new(8)
+  WATER               = WATER_FLOWING
   WATER_STATIONARY    = Block.new(9)
   LAVA_FLOWING        = Block.new(10)
+  LAVA                = LAVA_FLOWING
   LAVA_STATIONARY     = Block.new(11)
   SAND                = Block.new(12)
   GRAVEL              = Block.new(13)
